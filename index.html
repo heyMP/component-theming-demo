@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="module" src="scripts.js"></script>
+  <style>
+    :root {
+      --theme-accent-1: orange;
+      --x-card--top-color--background-color: purple;
+    }
+
+    footer x-card::part(text) {
+      color: red;
+    }
+    footer x-card::part(top-color) {
+      background-color: blue;
+    }
+
+    h2 { 
+      color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <x-card>
+      <h2>Course Content</h2>
+    </x-card>
+  </main>
+  <footer>
+    <x-card></x-card>
+  </footer>
+</body>
+</html>

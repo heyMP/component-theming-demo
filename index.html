@@ -4,18 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Web Components Theming</title>
   <script type="module" src="scripts.js"></script>
   <style>
+    /* Default Lightdom styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+    }
+    main {
+      flex: 1 1 auto;
+    }
+
+    /* CSS Variable override. Hits all browers. */
     :root {
       --theme-accent-1: orange;
       --x-card--top-color--background-color: purple;
     }
 
+    /* This is what we can do in the future. */
     ::part(top-color) {
       background-color: yellow;
     }
-
     footer x-card::part(text) {
       color: red;
     }
@@ -27,11 +40,17 @@
 <body>
   <main>
     <x-card>
-      <h2>Course Content</h2>
+      <h2 slot="title">Main Content</h2>
+      <div slot="text">This is my main content</div>
+      <p>a;odifnosadifj asodifjasodif jasoidfj aosidj f oasid jf;osaidf.</p>
     </x-card>
   </main>
   <footer>
-    <x-card></x-card>
+    <x-card>
+      <h2 slot="title">Footer Content</h2>
+      <div slot="text">This is my main content</div>
+      <p>a;odifnosadifj asodifjasodif jasoidfj aosidj f oasid jf;osaidf.</p>
+    </x-card>
   </footer>
 </body>
 </html>

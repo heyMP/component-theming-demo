@@ -25,7 +25,9 @@ class XCard extends LitElement {
         <div part="top-color"></div>
         <div part="title"><slot name="title"></slot></div>
         <div part="text"><slot name="text"></slot></div>
-        <slot></slot>
+        <div part="slot">
+          <slot></slot>
+        </div>
       </div>
     `
   }

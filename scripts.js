@@ -7,7 +7,7 @@ class XCard extends LitElement {
         :host {
           display: block;
           --x-card--top-color--background-color-default: var(--theme-accent-1);
-          --x-card--text--color-default: var(--theme-font-color);
+          --x-card--text--color-local: var(--theme-font-color);
         }
         [part="top-color"] {
           /* properties that are tied into the "--theme" convention define a css variable --[element-name]--[css-part-name]--[css-property] */
@@ -17,7 +17,7 @@ class XCard extends LitElement {
           width: var(--x-card--top-color--width, 100%);
         }
         [part="text"] {
-          color: var(--x-card--text--color, var(--x-card--text--color-default, gray));
+          color: var(--x-card--text--color, var(--x-card--text--color-local, gray));
         }
       </style>
       <!-- All elements get labeled with "part" attribute -->

@@ -23,13 +23,10 @@
     :root {
       /* Default accent color */
       --theme-accent-1: orange;
-      /* Override for x-card */
-      --x-card--top-color--background-color: purple;
-    }
-
-    footer x-card {
-      /* Override for footer card that works in lightdom ONLY */
-      --x-card--top-color--background-color: red;
+      --theme-font-color: blue;
+      /* Theme overrides */
+      --x-card--top-color--background-color: green;
+      --x-card--text--color: green;
     }
 
     /* This is what we can do in the future. Chrome ONLY */
@@ -52,14 +49,14 @@
     <x-card>
       <h2 slot="title">Main Content</h2>
       <div slot="text">This is my main content</div>
-      <p>a;odifnosadifj asodifjasodif jasoidfj aosidj f oasid jf;osaidf.</p>
+      <p>Sit irure et magna ex eiusmod aliqua est fugiat eiusmod laborum Lorem cillum nulla. Enim veniam pariatur fugiat et enim id in sit cillum culpa. Ullamco commodo fugiat excepteur magna eiusmod ea reprehenderit nisi duis ut nulla minim.</p>
     </x-card>
   </main>
   <footer>
     <x-card>
       <h2 slot="title">Footer Content</h2>
-      <div slot="text">This is my main content</div>
-      <p>a;odifnosadifj asodifjasodif jasoidfj aosidj f oasid jf;osaidf.</p>
+      <div slot="text">This is my footer content</div>
+      <p>Proident ea incididunt nostrud veniam fugiat dolore ipsum aute ea. Nostrud consectetur excepteur est elit amet ullamco quis nisi officia. Officia commodo exercitation est anim ut. Laborum labore deserunt id laboris aliqua aliquip nisi in anim tempor tempor aute. Consectetur ea adipisicing aliquip laborum aliqua officia dolor ullamco excepteur.</p>
     </x-card>
   </footer>
 </body>

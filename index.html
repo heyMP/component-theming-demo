@@ -21,19 +21,29 @@
 
     /* CSS Variable override. Hits all browers. */
     :root {
+      /* Default accent color */
       --theme-accent-1: orange;
+      /* Override for x-card */
       --x-card--top-color--background-color: purple;
     }
 
-    /* This is what we can do in the future. */
+    footer x-card {
+      /* Override for footer card that works in lightdom ONLY */
+      --x-card--top-color--background-color: red;
+    }
+
+    /* This is what we can do in the future. Chrome ONLY */
+    /* Override all top-color background colors */
     ::part(top-color) {
       background-color: yellow;
     }
-    footer x-card::part(text) {
-      color: red;
-    }
+    /* Override top-color for footer x-card */
     footer x-card::part(top-color) {
       background-color: blue;
+    }
+    /* Override text color for footer x-cards */
+    footer x-card::part(text) {
+      color: red;
     }
   </style>
 </head>

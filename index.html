@@ -19,17 +19,29 @@
       flex: 1 1 auto;
     }
 
+    x-card .title {
+      color: red;
+    }
+
     /* CSS Variable override. Hits all browers. */
     :root {
-      /* Default accent color */
+      --x-card--title--color: red;
+      --x-card--title--font-size: 10px;
       --theme-accent-1: orange;
       --theme-font-color: blue;
-      /* Theme overrides */
       --x-card--top-color--background-color: green;
       --x-card--text--color: green;
     }
 
-    /* This is what we can do in the future. Chrome ONLY */
+    main {
+      --x-card--top-color--background-color: purple;
+    }
+
+    ::part(text) {
+      color: blue;
+      font-size: 40px;
+    }
+
     /* Override all top-color background colors */
     ::part(top-color) {
       background-color: yellow;

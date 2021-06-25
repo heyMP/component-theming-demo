@@ -11,48 +11,21 @@
     body {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
       min-height: 100vh;
       padding: 0;
       margin: 0;
     }
-    main {
+    main,footer {
+      display: flex;
       flex: 1 1 auto;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    x-card .title {
-      color: red;
-    }
-
-    /* CSS Variable override. Hits all browers. */
-    :root {
-      --x-card--title--color: red;
-      --x-card--title--font-size: 10px;
-      --theme-accent-1: orange;
-      --theme-font-color: blue;
-      --x-card--top-color--background-color: green;
-      --x-card--text--color: green;
-    }
-
-    main {
-      --x-card--top-color--background-color: purple;
-    }
-
-    ::part(text) {
-      color: blue;
-      font-size: 40px;
-    }
-
-    /* Override all top-color background colors */
-    ::part(top-color) {
-      background-color: yellow;
-    }
-    /* Override top-color for footer x-card */
-    footer x-card::part(top-color) {
-      background-color: blue;
-    }
-    /* Override text color for footer x-cards */
-    footer x-card::part(text) {
-      color: red;
+    x-card {
+      max-width: 400px;
     }
   </style>
 </head>
@@ -60,15 +33,21 @@
   <main>
     <x-card>
       <h2 slot="title">Main Content</h2>
-      <div slot="text">This is my main content</div>
-      <p>Sit irure et magna ex eiusmod aliqua est fugiat eiusmod laborum Lorem cillum nulla. Enim veniam pariatur fugiat et enim id in sit cillum culpa. Ullamco commodo fugiat excepteur magna eiusmod ea reprehenderit nisi duis ut nulla minim.</p>
+      <div slot="description">This is my main content</div>
+      <div slot="icon">*</div>
+      <div slot="text">
+        <p>Sit irure et magna ex eiusmod aliqua est fugiat eiusmod laborum Lorem cillum nulla. Enim veniam pariatur fugiat et enim id in sit cillum culpa. Ullamco commodo fugiat excepteur magna eiusmod ea reprehenderit nisi duis ut nulla minim.</p>
+      </div>
     </x-card>
   </main>
   <footer>
     <x-card>
       <h2 slot="title">Footer Content</h2>
-      <div slot="text">This is my footer content</div>
-      <p>Proident ea incididunt nostrud veniam fugiat dolore ipsum aute ea. Nostrud consectetur excepteur est elit amet ullamco quis nisi officia. Officia commodo exercitation est anim ut. Laborum labore deserunt id laboris aliqua aliquip nisi in anim tempor tempor aute. Consectetur ea adipisicing aliquip laborum aliqua officia dolor ullamco excepteur.</p>
+      <div slot="description">This is my footer content</div>
+      <div slot="icon">@</div>
+      <div slot="text">
+        <p>Proident ea incididunt nostrud veniam fugiat dolore ipsum aute ea. Nostrud consectetur excepteur est elit amet ullamco quis nisi officia. Officia commodo exercitation est anim ut. Laborum labore deserunt id laboris aliqua aliquip nisi in anim tempor tempor aute. Consectetur ea adipisicing aliquip laborum aliqua officia dolor ullamco excepteur.</p>
+      </div>
     </x-card>
   </footer>
 </body>
